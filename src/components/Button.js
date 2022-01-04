@@ -1,7 +1,7 @@
 
 function Button({color, text, onClick}) {
   return (
-    <button style={{backgroundColor:color}}>{text}</button>
+    <button style={{backgroundColor:color}} onClick={onClick}>{text}</button>
   );
 }
 

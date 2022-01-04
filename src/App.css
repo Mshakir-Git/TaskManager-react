@@ -1,7 +1,70 @@
 .App {
-  text-align: center;
+  width: 50vw;
+  margin: auto;
 }
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+button{
+  padding: 6px;
+  padding-left:10px;
+  padding-right:10px;
 
+  border-radius: 4px;
+  font-weight: 600;
+
+}
+form{
+  display: flex;
+  flex-direction: column;
+
+}
+input{
+  margin-top: 15px;
+}
+form>div{
+  display: flex;
+  align-items: flex-end;
+}
+.input{
+  padding: 6px;
+  border-radius: 4px;
+
+  border:2px solid gray;
+
+
+  width: 100%;
+}
+.submit{
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  margin-top: 10px;
+  color: aliceblue;
+  background-color: rgb(29, 29, 29);
+}
+.task{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 6px;
+  padding-left:10px;
+  padding-right:10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  border:2px solid gray;
+  background-color: rgb(245, 245, 245);
+}
+.task >p{
+  align-self: end;
+}
+.reminder{
+  border-left:7px solid rgb(255, 68, 68);
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

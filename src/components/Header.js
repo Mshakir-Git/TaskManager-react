@@ -1,9 +1,12 @@
 import Button from './Button'
-function Header() {
+function Header({isFormVisible,toggleForm}) {
+  const add=()=>{
+    toggleForm(!isFormVisible)
+  }
   return (
-    <header>
+    <header className="header">
       <h1>Task tracker</h1>
-      <Button color="green" text="Add" />
+      <Button color="rgb(68,255,68)" text="Add" onClick={add}/>
     </header>
   );
 }

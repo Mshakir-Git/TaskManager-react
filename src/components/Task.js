@@ -1,10 +1,11 @@
 
 
-function Task({text}){
+function Task({text,reminder,day}){
 
 	return (
-		<div style={{background:"red"}}>
+		<div className={reminder?"task reminder":"task"}>
 		<h1>{text}</h1>
+		<p>{day}</p>
 		
 
 		</div>

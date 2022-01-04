@@ -1,5 +1,8 @@
 import Header from './components/Header'
 import Tasks from './components/Tasks'
+import AddForm from './components/AddForm'
+import './App.css'
+
 import {useState} from 'react'
 
 function App() {
@@ -18,9 +21,11 @@ const [tasks,setTask]=useState([
     },
 
 ]);
+const [isFormVisible,toggleForm]=useState(false)
   return (
     <div className="App">
-      <Header />
+      <Header isFormVisible={isFormVisible} toggleForm={toggleForm}/>
+      {isFormVisible && <AddForm tasks={tasks} setTask={setTask} />}
       <Tasks tasks={tasks} />
     </div>
   );

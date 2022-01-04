@@ -4,7 +4,7 @@ function Tasks({tasks}){
 
 	return (
 		<>
-		{tasks.map((task)=><Task text={task.text}/>)}
+		{tasks.map((task)=><Task key={task.id} text={task.text} day={task.day} reminder={task.reminder}/>)}
 
 		</>
 	)
