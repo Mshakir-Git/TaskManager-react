@@ -26,7 +26,7 @@ const [isFormVisible,toggleForm]=useState(false)
     <div className="App">
       <Header isFormVisible={isFormVisible} toggleForm={toggleForm}/>
       {isFormVisible && <AddForm tasks={tasks} setTask={setTask} />}
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} setTask={setTask}/>
     </div>
   );
 }

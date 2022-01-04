@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 
 function AddForm({tasks,setTask}) {
 
+
 const [formState,setFormState]=useState(
     {
         id:0,
@@ -10,11 +11,13 @@ const [formState,setFormState]=useState(
         reminder:true,
     }
 )
+
+
 const add=(e)=>{
     e.preventDefault()
-    setFormState({...formState,id:tasks.length+1})
     //console.log(formState)
-    setTask([...tasks,formState])
+    const newId=tasks.length==0?0:Math.max(...tasks.map((t)=>t.id))+1
+    setTask([...tasks,{...formState,id:newId}])
 
 }
     return (
